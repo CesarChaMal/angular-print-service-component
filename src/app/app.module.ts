@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrintLayoutComponent } from './print-layout/print-layout.component';
 import { InvoiceComponent } from './invoice/invoice.component';
-import {PrintService} from './print.service';
+import { PrintService} from './print.service';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrintLayoutComponent,
-    InvoiceComponent
+    InvoiceComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

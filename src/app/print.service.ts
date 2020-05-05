@@ -7,21 +7,26 @@ import {Router} from '@angular/router';
 export class PrintService {
   isPrinting = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    console.log('PrintService');
+   }
 
   printDocument(documentName: string, documentData: string[]) {
+    console.log('PrintService printDocument');
     this.isPrinting = true;
     this.router.navigate(['/',
       { outlets: {
-        'print': ['print', documentName, documentData.join()]
+        'printPopup': ['print', documentName, documentData.join()]
       }}]);
   }
 
   onDataReady() {
-    setTimeout(() => {
+    console.log('PrintService onDataReady');
+    setTimeout(() => {  
       window.print();
       this.isPrinting = false;
       this.router.navigate([{ outlets: { print: null }}]);
+      // this.router.navigate([{ outlets: { printPopup: null }}]);
     });
   }
 }

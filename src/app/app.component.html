@@ -4,7 +4,8 @@
       Welcome to {{ title }}!
     </h1>
     <button (click)="onPrintInvoice()">PRINT INVOICE</button>
+    <a mat-button color="primary" [routerLink]="['/test']">TEST COMPONENT</a>
   </div>
   <router-outlet></router-outlet>
-  <router-outlet name="print"></router-outlet>
+  <router-outlet name="printPopup"></router-outlet>
 </div>

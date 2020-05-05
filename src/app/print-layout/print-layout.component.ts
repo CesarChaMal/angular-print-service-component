@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrintLayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log('PrintLayoutComponent');
+  }
 
   ngOnInit() {
+    console.log('PrintLayoutComponent ngOnInit');
   }
 
 }

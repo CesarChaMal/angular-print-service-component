@@ -9,11 +9,13 @@ import {PrintService} from './print.service';
 export class AppComponent {
   title = 'angular-print-service';
 
-  constructor(public printService: PrintService) { }
+  constructor(public printService: PrintService) { 
+    console.log('AppComponent');
+  }
 
   onPrintInvoice() {
+    console.log('AppComponent onPrintInvoice');
     const invoiceIds = ['101', '102'];
-    this.printService
-      .printDocument('invoice', invoiceIds);
+    this.printService.printDocument('invoice', invoiceIds);
   }
 }
